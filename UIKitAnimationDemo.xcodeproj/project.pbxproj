@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		65BDFD8F19C8C7CE00077C8C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BDFD8E19C8C7CE00077C8C /* main.m */; };
 		65BDFD9219C8C7CE00077C8C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BDFD9119C8C7CE00077C8C /* AppDelegate.m */; };
-		65BDFD9519C8C7CE00077C8C /* UIKitAnimationDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 65BDFD9319C8C7CE00077C8C /* UIKitAnimationDemo.xcdatamodeld */; };
 		65BDFD9819C8C7CE00077C8C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BDFD9719C8C7CE00077C8C /* ViewController.m */; };
 		65BDFD9B19C8C7CE00077C8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65BDFD9919C8C7CE00077C8C /* Main.storyboard */; };
 		65BDFD9D19C8C7CE00077C8C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65BDFD9C19C8C7CE00077C8C /* Images.xcassets */; };
 		65BDFDA019C8C7CE00077C8C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65BDFD9E19C8C7CE00077C8C /* LaunchScreen.xib */; };
 		65BDFDAC19C8C7CF00077C8C /* UIKitAnimationDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BDFDAB19C8C7CF00077C8C /* UIKitAnimationDemoTests.m */; };
+		65BDFDB919C8CD3300077C8C /* bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 65BDFDB819C8CD3300077C8C /* bg.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,7 +33,6 @@
 		65BDFD8E19C8C7CE00077C8C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		65BDFD9019C8C7CE00077C8C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		65BDFD9119C8C7CE00077C8C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		65BDFD9419C8C7CE00077C8C /* UIKitAnimationDemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UIKitAnimationDemo.xcdatamodel; sourceTree = "<group>"; };
 		65BDFD9619C8C7CE00077C8C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		65BDFD9719C8C7CE00077C8C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		65BDFD9A19C8C7CE00077C8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -42,6 +41,7 @@
 		65BDFDA519C8C7CF00077C8C /* UIKitAnimationDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIKitAnimationDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		65BDFDAA19C8C7CF00077C8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65BDFDAB19C8C7CF00077C8C /* UIKitAnimationDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIKitAnimationDemoTests.m; sourceTree = "<group>"; };
+		65BDFDB819C8CD3300077C8C /* bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +90,7 @@
 				65BDFD9919C8C7CE00077C8C /* Main.storyboard */,
 				65BDFD9C19C8C7CE00077C8C /* Images.xcassets */,
 				65BDFD9E19C8C7CE00077C8C /* LaunchScreen.xib */,
-				65BDFD9319C8C7CE00077C8C /* UIKitAnimationDemo.xcdatamodeld */,
+				65BDFDB719C8CD3300077C8C /* Resources */,
 				65BDFD8C19C8C7CE00077C8C /* Supporting Files */,
 			);
 			path = UIKitAnimationDemo;
@@ -120,6 +120,14 @@
 				65BDFDAA19C8C7CF00077C8C /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		65BDFDB719C8CD3300077C8C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				65BDFDB819C8CD3300077C8C /* bg.jpg */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,6 +212,7 @@
 			files = (
 				65BDFD9B19C8C7CE00077C8C /* Main.storyboard in Resources */,
 				65BDFDA019C8C7CE00077C8C /* LaunchScreen.xib in Resources */,
+				65BDFDB919C8CD3300077C8C /* bg.jpg in Resources */,
 				65BDFD9D19C8C7CE00077C8C /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -222,7 +231,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65BDFD9519C8C7CE00077C8C /* UIKitAnimationDemo.xcdatamodeld in Sources */,
 				65BDFD9219C8C7CE00077C8C /* AppDelegate.m in Sources */,
 				65BDFD9819C8C7CE00077C8C /* ViewController.m in Sources */,
 				65BDFD8F19C8C7CE00077C8C /* main.m in Sources */,
@@ -428,19 +436,6 @@
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		65BDFD9319C8C7CE00077C8C /* UIKitAnimationDemo.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				65BDFD9419C8C7CE00077C8C /* UIKitAnimationDemo.xcdatamodel */,
-			);
-			currentVersion = 65BDFD9419C8C7CE00077C8C /* UIKitAnimationDemo.xcdatamodel */;
-			path = UIKitAnimationDemo.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 65BDFD8119C8C7CE00077C8C /* Project object */;
 }
