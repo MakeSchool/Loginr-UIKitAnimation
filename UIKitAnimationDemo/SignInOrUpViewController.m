@@ -14,15 +14,20 @@
     UIView* activeField;
 }
 
+// Linked from storyboard
 @property (weak, nonatomic) IBOutlet UITextField *txtUsername;
 @property (weak, nonatomic) IBOutlet UITextField *txtPassword;
 @property (weak, nonatomic) IBOutlet LoginButton *loginButton;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UIImageView *imgBackground;
 
+// UIKit Dynamics
+@property (strong, nonatomic) UIDynamicAnimator* dynamicAnimator;
+
 @end
 
 @implementation SignInOrUpViewController
+
 
 - (void)viewDidLoad
 {
@@ -43,6 +48,8 @@
             self.imgBackground.image = [UIImage imageNamed:@"bg3.jpg"];
             break;
     }
+    
+    self.dynamicAnimator = [[UIDynamicAnimator alloc] initWithReferenceView:self.view];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -72,6 +79,62 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+#pragma mark -
+#pragma mark Log In Button
+- (IBAction)signInOrSignUpPressed:(id)sender
+{
+    // UIKit Dynamics
+    // This is a bit much, but it's for demonstration!
+    switch (self.loginButton.loginState)
+    {
+        case kStateValid:
+        {
+            // Make the UI fall off the screen
+            
+            NSArray* dynamicsItems = @[self.txtUsername, self.txtPassword, self.loginButton];
+            
+            UIGravityBehavior* gravityBehavior = [[UIGravityBehavior alloc] initWithItems:dynamicsItems];
+            
+            UICollisionBehavior* collisionBehavior = [[UICollisionBehavior alloc] initWithItems:dynamicsItems];
+            collisionBehavior.translatesReferenceBoundsIntoBoundary = NO;
+            
+            UIDynamicItemBehavior* angularVelocity = [[UIDynamicItemBehavior alloc] initWithItems:dynamicsItems];
+            [angularVelocity addAngularVelocity:-M_PI forItem:self.txtUsername];
+            [angularVelocity addAngularVelocity:M_PI forItem:self.txtPassword];
+            [angularVelocity addAngularVelocity:M_PI_2 forItem:self.loginButton];
+            
+            [self.dynamicAnimator addBehavior:gravityBehavior];
+            [self.dynamicAnimator addBehavior:angularVelocity];
+            [self.dynamicAnimator addBehavior:collisionBehavior];
+        }
+            break;
+            
+        case kStateInvalid:
+        {
+            // Shake the login button
+            
+            UIPushBehavior* pushBehavior = [[UIPushBehavior alloc] initWithItems:@[self.loginButton] mode:UIPushBehaviorModeInstantaneous];
+            pushBehavior.pushDirection = CGVectorMake(25.0f, 0.0f);
+            pushBehavior.active = YES;
+            
+            UIDynamicItemBehavior* elasticityBehavior = [[UIDynamicItemBehavior alloc] initWithItems:@[self.loginButton]];
+            elasticityBehavior.elasticity = 0.35f;
+            
+            UICollisionBehavior* collisionBehavior = [[UICollisionBehavior alloc] initWithItems:@[self.loginButton]];
+            collisionBehavior.translatesReferenceBoundsIntoBoundary = YES;
+            
+            UISnapBehavior* snapBehavior = [[UISnapBehavior alloc] initWithItem:self.loginButton snapToPoint:self.loginButton.center];
+            snapBehavior.damping = 0.1f;
+            
+            [self.dynamicAnimator addBehavior:pushBehavior];
+            [self.dynamicAnimator addBehavior:elasticityBehavior];
+            [self.dynamicAnimator addBehavior:collisionBehavior];
+            [self.dynamicAnimator addBehavior:snapBehavior];
+        }
+            break;
+    }
+}
 
 #pragma mark -
 #pragma mark - Tap Gesture Recognizer
@@ -122,7 +185,7 @@
 
 - (void)checkLoginState
 {
-    if (self.txtUsername.text.length >= 1 && self.txtPassword.text.length >= 5)
+    if ([self usernameIsValid:self.txtUsername.text] && [self passwordIsValid:self.txtPassword.text])
     {
         self.loginButton.loginState = kStateValid;
     }
@@ -130,6 +193,16 @@
     {
         self.loginButton.loginState = kStateInvalid;
     }
+}
+
+- (BOOL)passwordIsValid:(NSString*)password
+{
+    return password.length >= 5;
+}
+
+- (BOOL)usernameIsValid:(NSString*)username
+{
+    return username.length >= 1;
 }
 
 #pragma mark -
