@@ -70,7 +70,7 @@
     self.btnSignIn.frame = offscreenSignInFrame;
     self.btnCreateAccount.frame = offscreenCreateAccountFrame;
     
-    [UIView animateWithDuration:1.5f delay:0.0f usingSpringWithDamping:0.75f initialSpringVelocity:1.0f options:UIViewAnimationOptionCurveEaseIn animations:^{
+    [UIView animateWithDuration:1.0f delay:0.0f usingSpringWithDamping:0.75f initialSpringVelocity:1.0f options:UIViewAnimationOptionCurveEaseIn animations:^{
         self.lblTitle.alpha = 1.0f;
         self.btnSignIn.alpha = 1.0f;
         self.btnCreateAccount.alpha = 1.0f;

@@ -15,6 +15,12 @@
 		65BDFDA019C8C7CE00077C8C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65BDFD9E19C8C7CE00077C8C /* LaunchScreen.xib */; };
 		65BDFDAC19C8C7CF00077C8C /* UIKitAnimationDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BDFDAB19C8C7CF00077C8C /* UIKitAnimationDemoTests.m */; };
 		65BDFDB919C8CD3300077C8C /* bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 65BDFDB819C8CD3300077C8C /* bg.jpg */; };
+		65BDFDBC19C9053900077C8C /* bg2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 65BDFDBA19C9053900077C8C /* bg2.jpg */; };
+		65BDFDBD19C9053900077C8C /* bg3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 65BDFDBB19C9053900077C8C /* bg3.jpg */; };
+		65BDFDC019C9FD5B00077C8C /* LoginButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BDFDBF19C9FD5B00077C8C /* LoginButton.m */; };
+		65BDFDC319CA0E9500077C8C /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BDFDC219CA0E9500077C8C /* LoginViewController.m */; };
+		65DC904619CD07ED00DA4F1F /* ios7-checkmark-outline-white.png in Resources */ = {isa = PBXBuildFile; fileRef = 65DC904419CD07ED00DA4F1F /* ios7-checkmark-outline-white.png */; };
+		65DC904719CD07ED00DA4F1F /* ios7-close-outline-white.png in Resources */ = {isa = PBXBuildFile; fileRef = 65DC904519CD07ED00DA4F1F /* ios7-close-outline-white.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +48,14 @@
 		65BDFDAA19C8C7CF00077C8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65BDFDAB19C8C7CF00077C8C /* UIKitAnimationDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIKitAnimationDemoTests.m; sourceTree = "<group>"; };
 		65BDFDB819C8CD3300077C8C /* bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg.jpg; sourceTree = "<group>"; };
+		65BDFDBA19C9053900077C8C /* bg2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg2.jpg; sourceTree = "<group>"; };
+		65BDFDBB19C9053900077C8C /* bg3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg3.jpg; sourceTree = "<group>"; };
+		65BDFDBE19C9FD5B00077C8C /* LoginButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginButton.h; sourceTree = "<group>"; };
+		65BDFDBF19C9FD5B00077C8C /* LoginButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginButton.m; sourceTree = "<group>"; };
+		65BDFDC119CA0E9500077C8C /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		65BDFDC219CA0E9500077C8C /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		65DC904419CD07ED00DA4F1F /* ios7-checkmark-outline-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ios7-checkmark-outline-white.png"; sourceTree = "<group>"; };
+		65DC904519CD07ED00DA4F1F /* ios7-close-outline-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ios7-close-outline-white.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +102,10 @@
 				65BDFD9619C8C7CE00077C8C /* ViewController.h */,
 				65BDFD9719C8C7CE00077C8C /* ViewController.m */,
 				65BDFD9919C8C7CE00077C8C /* Main.storyboard */,
+				65BDFDC119CA0E9500077C8C /* LoginViewController.h */,
+				65BDFDC219CA0E9500077C8C /* LoginViewController.m */,
+				65BDFDBE19C9FD5B00077C8C /* LoginButton.h */,
+				65BDFDBF19C9FD5B00077C8C /* LoginButton.m */,
 				65BDFD9C19C8C7CE00077C8C /* Images.xcassets */,
 				65BDFD9E19C8C7CE00077C8C /* LaunchScreen.xib */,
 				65BDFDB719C8CD3300077C8C /* Resources */,
@@ -125,6 +143,10 @@
 		65BDFDB719C8CD3300077C8C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				65DC904419CD07ED00DA4F1F /* ios7-checkmark-outline-white.png */,
+				65DC904519CD07ED00DA4F1F /* ios7-close-outline-white.png */,
+				65BDFDBA19C9053900077C8C /* bg2.jpg */,
+				65BDFDBB19C9053900077C8C /* bg3.jpg */,
 				65BDFDB819C8CD3300077C8C /* bg.jpg */,
 			);
 			path = Resources;
@@ -210,10 +232,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65BDFDBD19C9053900077C8C /* bg3.jpg in Resources */,
 				65BDFD9B19C8C7CE00077C8C /* Main.storyboard in Resources */,
 				65BDFDA019C8C7CE00077C8C /* LaunchScreen.xib in Resources */,
 				65BDFDB919C8CD3300077C8C /* bg.jpg in Resources */,
+				65BDFDBC19C9053900077C8C /* bg2.jpg in Resources */,
+				65DC904619CD07ED00DA4F1F /* ios7-checkmark-outline-white.png in Resources */,
 				65BDFD9D19C8C7CE00077C8C /* Images.xcassets in Resources */,
+				65DC904719CD07ED00DA4F1F /* ios7-close-outline-white.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,8 +258,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				65BDFD9219C8C7CE00077C8C /* AppDelegate.m in Sources */,
+				65BDFDC019C9FD5B00077C8C /* LoginButton.m in Sources */,
 				65BDFD9819C8C7CE00077C8C /* ViewController.m in Sources */,
 				65BDFD8F19C8C7CE00077C8C /* main.m in Sources */,
+				65BDFDC319CA0E9500077C8C /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,6 +454,7 @@
 				65BDFDB119C8C7CF00077C8C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		65BDFDB219C8C7CF00077C8C /* Build configuration list for PBXNativeTarget "UIKitAnimationDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -434,6 +463,7 @@
 				65BDFDB419C8C7CF00077C8C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
