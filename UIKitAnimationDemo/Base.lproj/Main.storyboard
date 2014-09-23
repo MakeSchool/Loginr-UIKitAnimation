@@ -195,7 +195,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="btnLogin" destination="p7b-IY-IUg" id="CNq-Cm-dux"/>
+                        <outlet property="imgBackground" destination="zCw-HA-BEV" id="Mjo-au-JRg"/>
+                        <outlet property="loginButton" destination="p7b-IY-IUg" id="SVH-xx-ixN"/>
                         <outlet property="scrollView" destination="XMI-tu-uuE" id="OP1-SF-MYo"/>
                         <outlet property="txtPassword" destination="hH1-ao-kKN" id="5ja-6P-3IG"/>
                         <outlet property="txtUsername" destination="uKR-UF-oYe" id="OOc-nG-uXj"/>

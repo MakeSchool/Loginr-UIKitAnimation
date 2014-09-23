@@ -16,8 +16,9 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *txtUsername;
 @property (weak, nonatomic) IBOutlet UITextField *txtPassword;
-@property (weak, nonatomic) IBOutlet LoginButton *btnLogin;
+@property (weak, nonatomic) IBOutlet LoginButton *loginButton;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UIImageView *imgBackground;
 
 @end
 
@@ -33,11 +34,13 @@
     switch (self.accountState)
     {
         case kStateSignIn:
-            [self.btnLogin.btnLogin setTitle:@"Log In" forState:UIControlStateNormal];
+            [self.loginButton.btnLogin setTitle:@"Log In" forState:UIControlStateNormal];
+            self.imgBackground.image = [UIImage imageNamed:@"bg2.jpg"];
             break;
             
         case kStateSignUp:
-            [self.btnLogin.btnLogin setTitle:@"Create Account" forState:UIControlStateNormal];
+            [self.loginButton.btnLogin setTitle:@"Create Account" forState:UIControlStateNormal];
+            self.imgBackground.image = [UIImage imageNamed:@"bg3.jpg"];
             break;
     }
 }
@@ -100,7 +103,7 @@
 
 - (BOOL)textFieldShouldClear:(UITextField *)textField
 {
-    self.btnLogin.loginState = kStateInvalid;
+    self.loginButton.loginState = kStateInvalid;
     return YES;
 }
 
@@ -121,11 +124,11 @@
 {
     if (self.txtUsername.text.length >= 1 && self.txtPassword.text.length >= 5)
     {
-        self.btnLogin.loginState = kStateValid;
+        self.loginButton.loginState = kStateValid;
     }
     else
     {
-        self.btnLogin.loginState = kStateInvalid;
+        self.loginButton.loginState = kStateInvalid;
     }
 }
 
