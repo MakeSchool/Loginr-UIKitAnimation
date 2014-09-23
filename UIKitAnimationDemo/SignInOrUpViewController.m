@@ -6,10 +6,10 @@
 //  Copyright (c) 2014 makeschool. All rights reserved.
 //
 
-#import "LoginViewController.h"
+#import "SignInOrUpViewController.h"
 #import "LoginButton.h"
 
-@interface LoginViewController ()
+@interface SignInOrUpViewController ()
 {
     UIView* activeField;
 }
@@ -21,7 +21,7 @@
 
 @end
 
-@implementation LoginViewController
+@implementation SignInOrUpViewController
 
 - (void)viewDidLoad
 {

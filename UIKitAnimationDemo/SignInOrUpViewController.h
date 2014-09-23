@@ -6,8 +6,8 @@
 //  Copyright (c) 2014 makeschool. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "InitialViewController.h"
 
-@interface LoginViewController : ViewController <UITextFieldDelegate>
+@interface SignInOrUpViewController : InitialViewController <UITextFieldDelegate>
 
 @end
