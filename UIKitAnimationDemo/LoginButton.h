@@ -18,7 +18,6 @@ NS_ENUM(NSInteger, LoginButtonState)
 
 @property (nonatomic, assign) enum LoginButtonState loginState;
 
-// These should probably be private...
 @property (nonatomic, weak) IBOutlet UIButton *btnLogin;
 @property (nonatomic, weak) IBOutlet UIImageView *lilSprite;
 

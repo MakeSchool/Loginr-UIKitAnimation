@@ -8,6 +8,14 @@
 
 #import "InitialViewController.h"
 
+NS_ENUM(NSInteger, AccountState)
+{
+    kStateSignIn,
+    kStateSignUp
+};
+
 @interface SignInOrUpViewController : InitialViewController <UITextFieldDelegate>
+
+@property (nonatomic, assign) enum AccountState accountState;
 
 @end

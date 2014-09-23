@@ -7,6 +7,7 @@
 //
 
 #import "InitialViewController.h"
+#import "SignInOrUpViewController.h"
 
 @interface InitialViewController ()
 
@@ -18,21 +19,38 @@
 
 @implementation InitialViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
 
-- (void)viewDidAppear:(BOOL)animated {
+- (void)viewDidAppear:(BOOL)animated
+{
     [super viewDidAppear:animated];
     
     [self doSomeFancyBlockBasedAnimations];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    SignInOrUpViewController* signInOrSignUpViewController =  segue.destinationViewController;
+    
+    if (sender == self.btnSignIn)
+    {
+        signInOrSignUpViewController.accountState = kStateSignIn;
+    }
+    else if (sender == self.btnCreateAccount)
+    {
+        signInOrSignUpViewController.accountState = kStateSignUp;
+    }
 }
 
 - (void)doSomeFancyBlockBasedAnimations {

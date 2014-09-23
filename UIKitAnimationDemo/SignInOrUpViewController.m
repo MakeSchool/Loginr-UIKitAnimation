@@ -29,6 +29,17 @@
     // Do any additional setup after loading the view.
     
     [self registerForKeyboardNotifications];
+    
+    switch (self.accountState)
+    {
+        case kStateSignIn:
+            [self.btnLogin.btnLogin setTitle:@"Log In" forState:UIControlStateNormal];
+            break;
+            
+        case kStateSignUp:
+            [self.btnLogin.btnLogin setTitle:@"Create Account" forState:UIControlStateNormal];
+            break;
+    }
 }
 
 - (void)viewDidAppear:(BOOL)animated
