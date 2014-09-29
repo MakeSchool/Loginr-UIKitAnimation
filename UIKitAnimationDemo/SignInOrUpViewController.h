@@ -14,7 +14,7 @@ NS_ENUM(NSInteger, AccountState)
     kStateSignUp
 };
 
-@interface SignInOrUpViewController : InitialViewController <UITextFieldDelegate>
+@interface SignInOrUpViewController : UIViewController <UITextFieldDelegate>
 
 @property (nonatomic, assign) enum AccountState accountState;
 
